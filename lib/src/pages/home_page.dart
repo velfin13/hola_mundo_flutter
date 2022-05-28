@@ -23,6 +23,14 @@ class HomePage extends StatelessWidget {
           )
         ],
       )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // ignore: avoid_print
+          print("hola mundo");
+        },
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
