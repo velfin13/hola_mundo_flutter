@@ -43,21 +43,37 @@ class _ContadorPageState extends State<ContadorPage> {
         width: 15,
       ),
       FloatingActionButton(
-        onPressed: () {},
+        onPressed: _reset,
         child: const Icon(Icons.exposure_zero),
       ),
       const Expanded(child: SizedBox()),
       FloatingActionButton(
-        onPressed: () {},
+        onPressed: _decremento,
         child: const Icon(Icons.remove),
       ),
       const SizedBox(
         width: 5,
       ),
-      FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
+      FloatingActionButton(
+          onPressed: _incremento, child: const Icon(Icons.add)),
       const SizedBox(
         width: 15,
       ),
     ]);
+  }
+
+  void _incremento() {
+    _counter++;
+    setState(() {});
+  }
+
+  void _decremento() {
+    _counter--;
+    setState(() {});
+  }
+
+  void _reset() {
+    _counter = 0;
+    setState(() {});
   }
 }
